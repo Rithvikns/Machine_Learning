@@ -58,3 +58,7 @@ choice of K
 
 
 not scalable.
+
+## Resources
+
+For more details you can refer to : https://scikit-learn.org/1.6/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
