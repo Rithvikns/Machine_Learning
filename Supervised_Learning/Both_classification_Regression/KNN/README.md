@@ -13,26 +13,48 @@ KNN Working
 
 1) Choose the number k , i.e k is the number of nearest neighbours to consider.
 2) calculate the distance using methods such as
+
+   
    Euclidean Distance
+
+
    manhattan distance
+
+
    Minkowski distance : generalisation form which includes both euclidean and manhattan distance as special cases
+
+
    Hamming distance.
-3) Sort the distances.
-4) pick the nearest neighbours.
-5) Vote for classification task , Average for regression task.
+4) Sort the distances.
+5) pick the nearest neighbours.
+6) Vote for classification task , Average for regression task.
 
 
 ## Advantages of KNN
 
 Simple and intuitive
+
+
 No training period
+
+
 Adaptable to new data
 
 ## Disadvantages of KNN
 
 Computationally expensive (comparing the input point with all other points in the dataset)
+
+
 Slow
+
+
 Memory intensive
+
+
 sensitivity to irrelevant features
+
+
 choice of K
+
+
 not scalable.
