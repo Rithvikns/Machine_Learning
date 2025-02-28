@@ -69,9 +69,5 @@ print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
 ## Conclusion
 Naïve Bayes is a simple yet powerful classification algorithm, particularly useful for text classification and spam filtering. However, its independence assumption can be a limitation in some cases.
 
----
-**Author:** Your Name  
-**License:** MIT  
-**Repository:** [GitHub Link](https://github.com/your-repo)  
 
 
