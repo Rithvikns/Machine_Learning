@@ -70,7 +70,7 @@ print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
 Naïve Bayes is a simple yet powerful classification algorithm, particularly useful for text classification and spam filtering. However, its independence assumption can be a limitation in some cases.
 
 ## Dataset
-For implementing the naive bayers algorithm , I have used the wine quality dataset , which is used in the KNN Implementation . You can check that here :
+For implementing the naive bayers algorithm , I have used the wine quality dataset , which is used in the KNN Implementation . You can check that here : https://github.com/Rithvikns/Machine_Learning/tree/main/Supervised_Learning/Both_classification_Regression/KNN%20#readme
 
 ## Output
 ![image](https://github.com/user-attachments/assets/f448cdcd-bf59-46d0-beef-cbc2c09abce7)
