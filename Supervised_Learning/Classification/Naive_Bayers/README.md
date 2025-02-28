@@ -75,5 +75,6 @@ For implementing the naive bayers algorithm , I have used the wine quality datas
 ## Output
 ![image](https://github.com/user-attachments/assets/f448cdcd-bf59-46d0-beef-cbc2c09abce7)
 
-The Confusion matrix explains the classification of the wine into three classes , here only there is an error in a single prediction and all the other predictions are correct , therefore bearing an accuracy of 91%
+The Confusion matrix explains the classification of the wine into three classes , here only there is an error in a single prediction and all the other predictions are correct , therefore bearing an accuracy of 97%
 
+![image](https://github.com/user-attachments/assets/949eb1d0-dc2a-4018-a80c-d8fa42c841c7)
