@@ -96,6 +96,31 @@ This approach allows **efficient real-time updates** without needing to recomput
 
 ## Expected Output
 During execution, the script should output messages indicating when edges are added or removed from the causal graph. The final causal graph is displayed as an adjacency matrix.
+```console
+Depth=0, working on node 2: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<?, ?it/s]
+
+---- Update 1 ----
+Depth=0, working on node 2: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<?, ?it/s]
+
+---- Update 2 ----
+Depth=0, working on node 2: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 273.00it/s]
+
+---- Update 3 ----
+Depth=0, working on node 2: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 312.34it/s]
+
+---- Update 4 ----
+Depth=0, working on node 2: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<?, ?it/s] 
+Adding edge: A → B
+Adding edge: B → A
+
+---- Update 5 ----
+Depth=0, working on node 2: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 653.18it/s] 
+
+Final Causal Graph (Adjacency Matrix):
+[[0. 1. 0.]
+ [1. 0. 0.]
+ [0. 0. 0.]]
+```
 
 ## License
 This project is open-source and available for modification and distribution.
