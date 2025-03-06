@@ -23,49 +23,75 @@ pip install numpy pandas networkx causallearn scipy
 4. **Update Graph** only if significant changes are detected.
 5. **Retrieve the final causal graph** as an adjacency matrix.
 
-## Code Explanation
-### `IncrementalPC` Class
-```python
-import numpy as np
-import networkx as nx
-import pandas as pd
-from causallearn.search.ConstraintBased.PC import pc
-from causallearn.utils.cit import fisherz
-from scipy.stats import ks_2samp
+# Explanation of IncrementalPC Code
 
-class IncrementalPC:
-    def __init__(self, initial_data, alpha=0.05):
-        self.alpha = alpha  # Significance level for independence tests
-        self.data = initial_data.copy()
-        self.variables = list(self.data.columns)
-        self.graph = self.run_pc(initial_data)  # Run PC Algorithm initially
+## Overview
+The `IncrementalPC` class is designed for **incremental causal discovery**, meaning it updates an existing causal graph when new data arrives instead of recomputing everything from scratch. It uses the **PC (Peter-Clark) algorithm** to infer causal relationships between variables in a dataset.
 
-    def run_pc(self, data):
-        cg = pc(data.to_numpy(), alpha=self.alpha, indep_test=fisherz, verbose=False)
-        adj_matrix = cg.G.graph  # Get adjacency matrix
-        g = nx.from_numpy_matrix(adj_matrix, create_using=nx.DiGraph)  # Convert to NetworkX
-        return g
+---
+## 1. Initialization (`__init__` method)
+### **Purpose:**
+- Initializes the class with an initial dataset and a significance level (`alpha`).
+- Runs the **PC algorithm** to generate an initial causal graph.
 
-    def detect_distribution_shift(self, new_data):
-        changed_vars = []
-        for col in self.variables:
-            stat, p_value = ks_2samp(self.data[col], new_data[col])
-            if p_value < 0.1:  # Detect changes in distribution
-                changed_vars.append(col)
-        return changed_vars
+### **Key Actions:**
+- Stores the provided dataset.
+- Runs the PC algorithm to compute the initial causal structure.
+- Converts the adjacency matrix into a **NetworkX graph** for easier manipulation.
 
-    def incremental_update(self, new_data):
-        changed_vars = self.detect_distribution_shift(new_data)
-        if not changed_vars:
-            print("No significant changes detected. Skipping update.")
-            return
-        self.data = pd.concat([self.data, new_data]).tail(1000)  # Keep last 1000 rows
-        new_graph = self.run_pc(self.data)  # Rerun PC Algorithm on updated data
-        self.graph = new_graph  # Update causal graph
+---
+## 2. Running the PC Algorithm (`run_pc` method)
+### **Purpose:**
+- Runs the **PC algorithm** from the `causallearn` library to infer causal relationships.
 
-    def get_graph(self):
-        return nx.to_numpy_matrix(self.graph)  # Return adjacency matrix
-```
+### **Key Actions:**
+- Converts the dataset into a **NumPy array**.
+- Applies the **PC algorithm**, which identifies conditional independence relationships.
+- Generates a **graph representation** of the causal structure using NetworkX.
+
+**Note:** The `verbose=False` parameter suppresses progress bars in the output.
+
+---
+## 3. Detecting Distribution Shifts (`detect_distribution_shift` method)
+### **Purpose:**
+- Determines whether the new data is significantly different from the old data.
+- Uses the **Kolmogorov-Smirnov (KS) test**, a statistical test that compares two distributions.
+
+### **Key Actions:**
+- Iterates through each column (variable) in the dataset.
+- Computes the KS test statistic and p-value.
+- If the **p-value is below 0.05**, the variable is considered to have undergone a significant shift.
+
+---
+## 4. Incremental Update (`incremental_update` method)
+### **Purpose:**
+- Updates the causal graph only if significant changes in data distribution are detected.
+
+### **Key Actions:**
+1. **Detect Changes**: Runs `detect_distribution_shift()` to check if any variables have changed significantly.
+2. **Merge Data**: If changes are detected, merges the new data with the existing dataset (keeping only the most recent 1000 rows).
+3. **Update Graph**: Recomputes the causal structure using `run_pc()`.
+
+### **Edge Updates:**
+- If a **new dependency is found**, an edge is added.
+- If a **previous dependency is no longer valid**, an edge is removed.
+
+---
+## 5. Retrieving the Final Graph (`get_graph` method)
+### **Purpose:**
+- Returns the current causal graph as an **adjacency matrix**.
+- Can be used for visualization or further analysis.
+
+---
+## **Summary of Workflow**
+1. **Initialize** the class with an initial dataset.
+2. **Run the PC Algorithm** to determine the initial causal relationships.
+3. **When new data arrives**, check if there are significant changes in the dataset.
+4. **If significant changes are detected**, update the causal graph.
+5. **Retrieve the final causal structure** as an adjacency matrix.
+
+This approach allows **efficient real-time updates** without needing to recompute the entire causal graph from scratch, making it suitable for streaming or dynamically changing datasets.
+
 
 
 ## Expected Output
@@ -75,7 +101,7 @@ During execution, the script should output messages indicating when edges are ad
 This project is open-source and available for modification and distribution.
 
 ## Contributors
-- **Your Name** (Replace with your GitHub username)
+- **Your Name** Rithvik Narayana Swamy
 
 ---
 
