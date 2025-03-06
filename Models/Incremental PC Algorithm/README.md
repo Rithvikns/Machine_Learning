@@ -67,36 +67,6 @@ class IncrementalPC:
         return nx.to_numpy_matrix(self.graph)  # Return adjacency matrix
 ```
 
-### Example Usage
-```python
-import time
-
-# Generate initial dataset
-np.random.seed(42)
-initial_data = pd.DataFrame({
-    "A": np.random.randn(1000),
-    "B": np.random.randn(1000) + 0.5,
-    "C": 2 * np.random.randn(1000) + 0.2 * np.random.randn(1000)
-})
-
-# Initialize IncrementalPC
-ipcd = IncrementalPC(initial_data)
-
-# Simulate real-time updates
-for i in range(5):
-    time.sleep(1)  # Simulating real-time delay
-    new_data = pd.DataFrame({
-        "A": np.random.randn(200) + i * 0.3,
-        "B": np.random.randn(200) + 0.5 + i * 0.15,
-        "C": 2 * np.random.randn(200) + 0.2 * np.random.randn(200) + i * 0.1
-    })
-    print(f"\n---- Update {i+1} ----")
-    ipcd.incremental_update(new_data)
-
-# Print final graph
-print("\nFinal Causal Graph (Adjacency Matrix):")
-print(ipcd.get_graph())
-```
 
 ## Expected Output
 During execution, the script should output messages indicating when edges are added or removed from the causal graph. The final causal graph is displayed as an adjacency matrix.
