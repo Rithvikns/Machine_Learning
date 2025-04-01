@@ -17,16 +17,18 @@ pip install gym
 - Google Colab’s files module is used to download the trained model.
 
 ## Setting Up the Environment
-The environment Pendulum-v1 is initialized using make_vec_env().
 
-This environment is continuous-action based, making it a good testbed for SAC.
+- The environment Pendulum-v1 is initialized using make_vec_env().
 
-The script also checks if a GPU is available for training to accelerate computation.
+- This environment is continuous-action based, making it a good testbed for SAC.
 
-3. Initializing the SAC Model
-The SAC algorithm is initialized with the "MlpPolicy", meaning it uses a feedforward neural network for function approximation.
+- The script also checks if a GPU is available for training to accelerate computation.
 
-The training logs are directed to TensorBoard for monitoring progress.
+## Initializing the SAC Model
+
+- The SAC algorithm is initialized with the "MlpPolicy", meaning it uses a feedforward neural network for function approximation.
+
+- The training logs are directed to TensorBoard for monitoring progress.
 
 4. Training the Agent
 The agent is trained for 100,000 timesteps using .learn().
