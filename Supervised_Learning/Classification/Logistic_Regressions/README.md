@@ -21,26 +21,6 @@ Logistic Regression is a supervised learning algorithm used for **classification
 - **Multinomial Logistic Regression**: Handles multi-class problems where classes are not ordered.
 - **Ordinal Logistic Regression**: Used for ordered categories (e.g., low, medium, high).
 
-## Implementation in Python
-```python
-import numpy as np
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-from sklearn.datasets import load_iris
-
-# Load dataset
-X, y = load_iris(return_X_y=True)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Train logistic regression model
-model = LogisticRegression(max_iter=200)
-model.fit(X_train, y_train)
-
-# Predict
-y_pred = model.predict(X_test)
-print("Predictions:", y_pred)
-```
-
 ## Advantages
 - Simple and easy to interpret.
 - Works well for linearly separable data.
