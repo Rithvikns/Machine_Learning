@@ -76,6 +76,4 @@ Where:
 - OpenAI Gym: https://gym.openai.com/
 - Stable-Baselines3: https://github.com/DLR-RM/stable-baselines3
 
-## License
-This project is licensed under the MIT License.
 
