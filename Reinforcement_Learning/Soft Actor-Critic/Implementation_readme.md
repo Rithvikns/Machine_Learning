@@ -1,6 +1,7 @@
-The Python program in the implementation.
+# Explanation of the code
+The Python program in the implementation for the soft actor critic explanation is provided here.
 
-1. Importing Libraries
+# Importing Libraries
 The script starts by importing necessary libraries such as gym, torch, numpy, and matplotlib.
 
 stable_baselines3 is used to implement the Soft Actor-Critic (SAC) algorithm.
