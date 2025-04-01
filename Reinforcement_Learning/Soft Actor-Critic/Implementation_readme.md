@@ -62,20 +62,23 @@ pip install gym
 
 - This step-by-step structure ensures that SAC is implemented efficiently while being fully c
 
-Understanding What’s Happening in Training
-1. What is the input?
-The input to the model is the state of the environment (Pendulum-v1).
+# Understanding What’s Happening in Training
 
-The state includes information about the pendulum, such as angle, angular velocity, and torque applied.
+## What is the input?
 
-The model takes this state and decides how much force to apply to balance the pendulum.
+- The input to the model is the state of the environment (Pendulum-v1).
 
-2. What is the model trying to do?
-The model is learning to control the pendulum so that it remains upright (instead of swinging randomly).
+- The state includes information about the pendulum, such as angle, angular velocity, and torque applied.
 
-It does this by adjusting the amount of force applied at each step.
+- The model takes this state and decides how much force to apply to balance the pendulum.
 
-The goal is to maximize rewards, which means stabilizing the pendulum in an upright position.
+## What is the model trying to do?
+
+- The model is learning to control the pendulum so that it remains upright (instead of swinging randomly).
+
+- It does this by adjusting the amount of force applied at each step.
+
+- The goal is to maximize rewards, which means stabilizing the pendulum in an upright position.
 
 3. Breaking Down the Training Log
 Metric	Meaning
