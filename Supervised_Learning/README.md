@@ -61,5 +61,6 @@ Classification is used when the target variable consists of discrete categories 
 - **Fraud Detection**: Identifying fraudulent transactions in banking.
 
 ## Conclusion
+
 Supervised learning is a fundamental machine learning technique that enables models to make accurate predictions based on labeled data. It includes regression for continuous outputs and classification for discrete categories. While powerful, it requires careful data collection, feature engineering, and model tuning to achieve optimal performance.
 
