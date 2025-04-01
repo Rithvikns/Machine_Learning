@@ -102,7 +102,7 @@ Logging to ./sac_tensorboard/SAC_1
 |    n_updates       | 699      |
 ---------------------------------
 ```
-
+```console
 Metric	                                 Meaning
 -------------------------------------------------------------------------------------------------
 ep_len_mean = 200	            |     On average, an episode lasts 200 timesteps (max allowed for Pendulum-v1).
@@ -111,6 +111,7 @@ episodes = 4	                |     The agent has completed 4 episodes so far.
 fps = 34	                    |     Training speed: 34 frames per second.
 time_elapsed = 23	            |     The model has been training for 23 seconds.
 total_timesteps = 800	        |     The agent has interacted with the environment 800 times.
+```
 
 4. What is happening with the loss values?
 Loss Metric	Meaning
