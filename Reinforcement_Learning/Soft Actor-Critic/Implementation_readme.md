@@ -1,14 +1,22 @@
 # Explanation of the code
 The Python program in the implementation for the soft actor critic explanation is provided here.
 
+## Installing Libraries
+```console
+pip install stable_baseline3
+pip install SAC
+pip install gym
+```
+
 ## Importing Libraries
-The script starts by importing necessary libraries such as gym, torch, numpy, and matplotlib.
 
-stable_baselines3 is used to implement the Soft Actor-Critic (SAC) algorithm.
+- The script starts by importing necessary libraries such as gym, torch, numpy, and matplotlib.
 
-Google Colab’s files module is used to download the trained model.
+- stable_baselines3 is used to implement the Soft Actor-Critic (SAC) algorithm.
 
-2. Setting Up the Environment
+- Google Colab’s files module is used to download the trained model.
+
+## Setting Up the Environment
 The environment Pendulum-v1 is initialized using make_vec_env().
 
 This environment is continuous-action based, making it a good testbed for SAC.
