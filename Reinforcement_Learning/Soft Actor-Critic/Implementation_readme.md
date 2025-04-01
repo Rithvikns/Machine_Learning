@@ -80,8 +80,30 @@ pip install gym
 
 - The goal is to maximize rewards, which means stabilizing the pendulum in an upright position.
 
-3. Breaking Down the Training Log
-Metric	Meaning
+## Breaking Down the Training Log
+```console
+Training SAC agent...
+Logging to ./sac_tensorboard/SAC_1
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 200      |
+|    ep_rew_mean     | -1.3e+03 |
+| time/              |          |
+|    episodes        | 4        |
+|    fps             | 34       |
+|    time_elapsed    | 23       |
+|    total_timesteps | 800      |
+| train/             |          |
+|    actor_loss      | 20.4     |
+|    critic_loss     | 0.301    |
+|    ent_coef        | 0.812    |
+|    ent_coef_loss   | -0.34    |
+|    learning_rate   | 0.0003   |
+|    n_updates       | 699      |
+---------------------------------
+```
+
+Metric	                                 Meaning
 ep_len_mean = 200	On average, an episode lasts 200 timesteps (max allowed for Pendulum-v1).
 ep_rew_mean = -1300	The average reward per episode is -1300 (lower means the agent is still learning). A perfect agent would have a higher reward.
 episodes = 4	The agent has completed 4 episodes so far.
