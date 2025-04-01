@@ -30,17 +30,19 @@ pip install gym
 
 - The training logs are directed to TensorBoard for monitoring progress.
 
-4. Training the Agent
-The agent is trained for 100,000 timesteps using .learn().
+## Training the Agent
 
-During training, the agent interacts with the environment, optimizing its policy to maximize rewards while balancing exploration via entropy.
+- The agent is trained for 100,000 timesteps using .learn().
 
-5. Saving and Downloading the Trained Model
-The trained SAC model is saved as sac_pendulum.zip.
+- During training, the agent interacts with the environment, optimizing its policy to maximize rewards while balancing exploration via entropy.
 
-In Google Colab, the script automatically downloads the model so it can be reused later.
+## Saving and Downloading the Trained Model
 
-6. Evaluating the Trained Agent
+- The trained SAC model is saved as sac_pendulum.zip.
+
+- In Google Colab, the script automatically downloads the model so it can be reused later.
+
+## Evaluating the Trained Agent
 The model is tested on the environment for 5 episodes to assess its performance.
 
 The script computes the mean and standard deviation of episode rewards to measure consistency.
