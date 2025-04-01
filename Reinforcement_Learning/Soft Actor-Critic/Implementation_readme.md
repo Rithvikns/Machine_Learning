@@ -61,3 +61,41 @@ pip install gym
 - It renders the environment to showcase how the agent behaves after training.
 
 - This step-by-step structure ensures that SAC is implemented efficiently while being fully c
+
+Understanding What’s Happening in Training
+1. What is the input?
+The input to the model is the state of the environment (Pendulum-v1).
+
+The state includes information about the pendulum, such as angle, angular velocity, and torque applied.
+
+The model takes this state and decides how much force to apply to balance the pendulum.
+
+2. What is the model trying to do?
+The model is learning to control the pendulum so that it remains upright (instead of swinging randomly).
+
+It does this by adjusting the amount of force applied at each step.
+
+The goal is to maximize rewards, which means stabilizing the pendulum in an upright position.
+
+3. Breaking Down the Training Log
+Metric	Meaning
+ep_len_mean = 200	On average, an episode lasts 200 timesteps (max allowed for Pendulum-v1).
+ep_rew_mean = -1300	The average reward per episode is -1300 (lower means the agent is still learning). A perfect agent would have a higher reward.
+episodes = 4	The agent has completed 4 episodes so far.
+fps = 34	Training speed: 34 frames per second.
+time_elapsed = 23	The model has been training for 23 seconds.
+total_timesteps = 800	The agent has interacted with the environment 800 times.
+4. What is happening with the loss values?
+Loss Metric	Meaning
+actor_loss = 20.4	The actor network is still adjusting its policy (a high value means it's still exploring).
+critic_loss = 0.301	The critic network is stabilizing its value predictions (low loss is good).
+ent_coef = 0.812	The entropy coefficient controls exploration vs. exploitation (higher means more exploration).
+ent_coef_loss = -0.34	The model is slightly reducing entropy, meaning it's starting to exploit learned behaviors.
+learning_rate = 0.0003	The rate at which the model is learning.
+n_updates = 699	The model has updated its parameters 699 times so far.
+What is the model learning here?
+At this point, the agent is still in the early stages of training.
+
+The reward is very negative (-1300), meaning the agent has not yet learned good control.
+
+Over time, as actor loss decreases and critic loss stabilizes, the agent will start making better decisions, and rewards will improve.
