@@ -43,18 +43,21 @@ pip install gym
 - In Google Colab, the script automatically downloads the model so it can be reused later.
 
 ## Evaluating the Trained Agent
-The model is tested on the environment for 5 episodes to assess its performance.
 
-The script computes the mean and standard deviation of episode rewards to measure consistency.
+- The model is tested on the environment for 5 episodes to assess its performance.
 
-7. Plotting Training Progress
-The script extracts TensorBoard logs and plots the mean episode reward over training steps.
+- The script computes the mean and standard deviation of episode rewards to measure consistency.
 
-This helps visualize learning progress and convergence.
+## Plotting Training Progress
 
-8. Visualizing the Agent’s Behavior
-The trained agent interacts with the environment for a few steps.
+- The script extracts TensorBoard logs and plots the mean episode reward over training steps.
 
-It renders the environment to showcase how the agent behaves after training.
+- This helps visualize learning progress and convergence.
 
-This step-by-step structure ensures that SAC is implemented efficiently while being fully c
+## Visualizing the Agent’s Behavior
+
+- The trained agent interacts with the environment for a few steps.
+
+- It renders the environment to showcase how the agent behaves after training.
+
+- This step-by-step structure ensures that SAC is implemented efficiently while being fully c
