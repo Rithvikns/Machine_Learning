@@ -131,3 +131,22 @@ n_updates = 699	          |   The model has updated its parameters 699 times so 
 - The reward is very negative (-1300), meaning the agent has not yet learned good control.
 
 - Over time, as actor loss decreases and critic loss stabilizes, the agent will start making better decisions, and rewards will improve.
+
+## Output
+
+![image](https://github.com/user-attachments/assets/c25a3daa-4f5f-4a25-ae33-dd1d4986c980)
+
+- Initially, the reward is very negative (around -1500 to -250), meaning the agent was performing poorly at the start.
+
+- Over time, the reward increases, meaning the agent is learning to control the pendulum better.
+
+- The SAC_1 run has reached the highest performance, while SAC_3 is still improving.
+
+
+- The Soft Actor-Critic (SAC) algorithm starts randomly exploring the environment.
+
+- Over training, it improves its policy, leading to higher rewards as it balances the pendulum effectively.
+
+- The smooth increase in reward indicates successful learning.
+
+✅ Conclusion: The SAC agent is learning progressively and achieving better control of the pendulum, resulting in higher rewards.
