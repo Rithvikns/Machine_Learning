@@ -105,15 +105,16 @@ Logging to ./sac_tensorboard/SAC_1
 ```console
 Metric	                                 Meaning
 -------------------------------------------------------------------------------------------------
-ep_len_mean = 200	            |     On average, an episode lasts 200 timesteps (max allowed for Pendulum-v1).
-ep_rew_mean = -1300	          |     The average reward per episode is -1300 (lower means the agent is still learning). A perfect agent would have a higher reward.
-episodes = 4	                |     The agent has completed 4 episodes so far.
-fps = 34	                    |     Training speed: 34 frames per second.
-time_elapsed = 23	            |     The model has been training for 23 seconds.
-total_timesteps = 800	        |     The agent has interacted with the environment 800 times.
+ep_len_mean = 200	         |     On average, an episode lasts 200 timesteps (max allowed for Pendulum-v1).
+ep_rew_mean = -1300	       |     The average reward per episode is -1300 (lower means the agent is still learning). A perfect agent would have a higher reward.
+episodes = 4	             |     The agent has completed 4 episodes so far.
+fps = 34	                 |     Training speed: 34 frames per second.
+time_elapsed = 23	         |     The model has been training for 23 seconds.
+total_timesteps = 800	     |     The agent has interacted with the environment 800 times.
 ```
 
-4. What is happening with the loss values?
+## What is happening with the loss values?
+
 Loss Metric	Meaning
 actor_loss = 20.4	The actor network is still adjusting its policy (a high value means it's still exploring).
 critic_loss = 0.301	The critic network is stabilizing its value predictions (low loss is good).
