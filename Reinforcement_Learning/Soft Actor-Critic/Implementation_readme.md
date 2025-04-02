@@ -114,17 +114,20 @@ total_timesteps = 800	     |     The agent has interacted with the environment 8
 ```
 
 ## What is happening with the loss values?
+```console
+Loss Metric               | 	Meaning
+actor_loss = 20.4	        |   The actor network is still adjusting its policy (a high value means it's still exploring).
+critic_loss = 0.301	      |   The critic network is stabilizing its value predictions (low loss is good).
+ent_coef = 0.812	        |   The entropy coefficient controls exploration vs. exploitation (higher means more exploration).
+ent_coef_loss = -0.34	    |   The model is slightly reducing entropy, meaning it's starting to exploit learned behaviors.
+learning_rate = 0.0003	  |   The rate at which the model is learning.
+n_updates = 699	          |   The model has updated its parameters 699 times so far.
+```
 
-Loss Metric	Meaning
-actor_loss = 20.4	The actor network is still adjusting its policy (a high value means it's still exploring).
-critic_loss = 0.301	The critic network is stabilizing its value predictions (low loss is good).
-ent_coef = 0.812	The entropy coefficient controls exploration vs. exploitation (higher means more exploration).
-ent_coef_loss = -0.34	The model is slightly reducing entropy, meaning it's starting to exploit learned behaviors.
-learning_rate = 0.0003	The rate at which the model is learning.
-n_updates = 699	The model has updated its parameters 699 times so far.
-What is the model learning here?
-At this point, the agent is still in the early stages of training.
+## What is the model learning here?
 
-The reward is very negative (-1300), meaning the agent has not yet learned good control.
+- At this point, the agent is still in the early stages of training.
 
-Over time, as actor loss decreases and critic loss stabilizes, the agent will start making better decisions, and rewards will improve.
+- The reward is very negative (-1300), meaning the agent has not yet learned good control.
+
+- Over time, as actor loss decreases and critic loss stabilizes, the agent will start making better decisions, and rewards will improve.
