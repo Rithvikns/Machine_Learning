@@ -1,4 +1,4 @@
-**# Linear Regression
+# Linear Regression
 
 ## Overview
 Linear Regression is a fundamental supervised learning algorithm used for predicting continuous values. It models the relationship between an independent variable (X) and a dependent variable (Y) by fitting a straight line.
