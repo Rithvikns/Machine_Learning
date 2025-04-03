@@ -25,5 +25,20 @@ y = b0 + b1x1 + b2x2 + ... + bnxn
 - **Multiple Linear Regression**: Involves multiple independent variables.
 - **Polynomial Regression**: Extends linear regression by including polynomial terms for capturing non-linearity.
 
+### 3. Assumptions of Linear Regression
+Linear Regression works best under the following assumptions:
+- **Linearity**: The relationship between independent and dependent variables is linear.
+- **Independence**: Observations are independent of each other.
+- **Homoscedasticity**: Constant variance of residuals.
+- **No Multicollinearity**: Independent variables should not be highly correlated.
+- **Normality of Residuals**: The residuals should be normally distributed.
+
+### 4. Evaluation Metrics
+To measure the performance of a Linear Regression model, the following metrics are used:
+- **Mean Squared Error (MSE)**: Measures the average squared differences between actual and predicted values.
+- **Root Mean Squared Error (RMSE)**: Square root of MSE, providing error in actual units.
+- **Mean Absolute Error (MAE)**: Average absolute differences between actual and predicted values.
+- **R-squared (R² Score)**: Indicates how well the independent variables explain the variance in the dependent variable.
+
 
 
