@@ -117,13 +117,5 @@ print("Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ---
-
-## ✨ Contributing
-Feel free to contribute by improving this documentation or adding examples!
-
-
-## 📄 License
-
-
 Happy Learning! 🚀
 
