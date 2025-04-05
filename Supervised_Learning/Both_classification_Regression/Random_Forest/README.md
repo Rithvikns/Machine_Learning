@@ -1,6 +1,5 @@
 # Random Forest Algorithm - Overview & Guide
 
-![Random Forest](https://upload.wikimedia.org/wikipedia/commons/7/76/Random_forest_diagram_complete.png)
 
 ## 🌲 What is Random Forest?
 Random Forest is a powerful **supervised learning algorithm** that uses an ensemble of decision trees to make predictions. It works by creating multiple decision trees during training and outputs the mode of the classes (classification) or mean prediction (regression) of the individual trees.
