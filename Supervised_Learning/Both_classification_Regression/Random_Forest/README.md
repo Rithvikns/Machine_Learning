@@ -123,9 +123,7 @@ Feel free to contribute by improving this documentation or adding examples!
 
 
 ## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
 
----
 
 Happy Learning! 🚀
 
