@@ -7,6 +7,10 @@ Random Forest is a powerful **supervised learning algorithm** that uses an ensem
 > Think of it as a "forest" of decision trees that collectively vote on the best prediction!
 
 ---
+## Ensemble Algorithm
+
+Ensemble learning is a machine learning technique that combines multiple models, often called "weak learners," to create a stronger and more accurate predictive model. The basic idea is that by aggregating the outputs of several individual models, the ensemble can correct errors that any single model might make, leading to better generalization and performance. Common ensemble methods include bagging (like Random Forest), which reduces variance by training multiple models on different subsets of data, and boosting (like AdaBoost or XGBoost), which focuses on correcting the mistakes of previous models. Ensemble learning is widely used because it enhances accuracy, improves robustness, and reduces the risk of overfitting compared to individual models.
+
 
 ## 🧩 Type of Learning
 - **Supervised Learning** ✅
