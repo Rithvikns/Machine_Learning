@@ -120,10 +120,6 @@ print(mean_squared_error(y_reg_test, y_reg_pred))
 
 ---
 
-## 📄 License
-This project is licensed under the MIT License.
-
----
 
 ## 💡 Future Enhancements
 - Add cross-validation visualization
