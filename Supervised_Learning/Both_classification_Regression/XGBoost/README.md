@@ -26,39 +26,6 @@ Uses max depth and pruning techniques to prevent over-complex trees.
 Cross-Validation:
 Built-in cross-validation for better model evaluation.
 
-Custom Objective Functions and Evaluation Metrics:
-Flexible to define custom losses and metrics for specific use-cases.
-
-Applications
-Fraud detection
-
-Customer churn predictio
-
-Recommendation systems
-
-Disease diagnosis
-
-Real-time risk assessment
-
-Ranking problems (like search engines)
-
-Sales forecasting
-
-Image classification (with feature engineering)
-
-Advantages
-High Performance: Fast and accurate due to optimized implementation.
-
-Flexibility: Can handle various data types and supports custom objectives.
-
-Scalability: Suitable for small to extremely large datasets.
-
-Robustness: Handles missing values and outliers well.
-
-Community Support: Extensive documentation and active community.
-
-Limitations
-Model Complexity: Can become complex and harder to interpret compared to simpler models.
 
 Hyperparameter Tuning: Performance heavily depends on fine-tuning multiple hyperparameters.
 
