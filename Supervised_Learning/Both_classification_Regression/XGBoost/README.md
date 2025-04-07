@@ -32,7 +32,7 @@ Flexible to define custom losses and metrics for specific use-cases.
 Applications
 Fraud detection
 
-Customer churn prediction
+Customer churn predictio
 
 Recommendation systems
 
