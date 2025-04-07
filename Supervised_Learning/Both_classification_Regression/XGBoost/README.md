@@ -114,6 +114,3 @@ This repository is dedicated to understanding the theoretical aspects and applic
 
 ---
 
-## License
-
-[Apache 2.0 License](https://github.com/dmlc/xgboost/blob/master/LICENSE)
