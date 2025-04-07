@@ -108,9 +108,3 @@ conda install -c conda-forge xgboost
 
 ---
 
-## Contribution
-
-This repository is dedicated to understanding the theoretical aspects and applications of XGBoost. Contributions and discussions are welcome! 🚀
-
----
-
